@@ -1,3 +1,3 @@
 # cv-interactive
 
-creating digital cv from inputs
+creating digital cv from inputs and ...
