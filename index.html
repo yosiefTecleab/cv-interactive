@@ -4,54 +4,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV-skjema</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   
   <div class="grid-container">
       <div class="cv-form">
-            <form class="registreringsskjema">
+            <form class="registrationForm">
                   <h1>CV skjema</h1>
 
                       <div class="item1">
-                          <label for="fullName">FullNavn</label>
+                          <label for="fullName">FullNavn:</label>
                           <input type="text" id="fullName" name="fullName" required>
 
-                          <label for="birthday">Født</label>
-                          <input type="text" id="birthDate" name="birthDate" required>
+                          <label for="birthday">Født:</label>
+                          <!--<input type="text" id="birthDate" name="birthDate" required>  -->
+                          <input type="text" id="birthDate" name="birthDate" > 
+                          
+                          <label for="email">Eposten:</label>
+                          <input type="text" id="email" name="email" required>
+                          
 
                       </div>     
                       <div class="item2">
-                          <label for="address">Adresse</label>
+                          <label for="address">Adresse:</label>
                           <input type="text" id="address" name="address" required>
 
 
 
                           <label for="summary">Sammendrag</label>
-                          <textarea id="summary" name="summary" required></textarea>
+                          <textarea id="summary" name="summary" ></textarea>
                       </div>
 
 
                       <div class="item3">
                           <label for="skills">Ferdigheter</label>
-                          <input type="text" id="skills" name="skills" required>
+                          <input type="text" id="skills" name="skills" >
 
                           <label for="experiences">Arbeidserfaring</label>
-                          <textarea id="experiences" name="experiences" required></textarea>
+                          <textarea id="experiences" name="experiences" ></textarea>
                       </div>
                       <div class="item4">
                           <label for="qualification">Utdannelse</label>
-                          <textarea id="qualification" name="qualification" required></textarea>
+                          <textarea id="qualification" name="qualification" ></textarea>
 
                           <label for="languages">Språk</label>
-                          <input type="text" id="languages" name="languages" required>
+                          <input type="text" id="languages" name="languages" >
                       </div>
 
 
                       <div class="item5">
                           <label for="competence">Kompetanse</label>
-                          <textarea id="competence" name="competence" required></textarea>
+                          <textarea id="competence" name="competence" ></textarea>
                           <label for="certification">Sertifikater</label>
-                          <textarea id="certification" name="certification" required></textarea>
+                          <textarea id="certification" name="certification" ></textarea>
                           
 
                       </div>
@@ -59,7 +65,7 @@
                           
 
                           <label for="references">Referanser</label>
-                          <textarea id="references" name="references" required></textarea>
+                          <textarea id="references" name="references" ></textarea>
 
                       </div>
 
@@ -178,5 +184,6 @@
        </div>
       
   </div>
+ <script src="script.js"></script>
 </body>
 </html>
