@@ -8,7 +8,7 @@ $(document).ready(function() {
     
     $("#emailT").append(email);
     
-    <!--$("#nameT").append(name);-->
+    //$("#nameT").append(name);
     
      $("#nameT").text(name);
     
