@@ -1,192 +1,162 @@
-<html lang="no">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV-skjema</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>cv-Interactive</title>
 </head>
+
 <body>
-  
-  <div class="grid-container">
-      <div class="cv-form">
+    <div class="main">
+        <div class="cv-form" id="formcv">
             <form class="registrationForm">
-                  <h1>CV skjema</h1>
+                <h1>CV skjema</h1>
 
-                      <div class="item1">
-                          <label for="fullName">FullNavn:</label>
-                          <input type="text" id="fullName" name="fullName" required>
+                <div class="item1">
+                    <label for="fullName">FullNavn:</label>
+                    <input type="text" id="fullName" name="fullName" required>
 
-                          <label for="birthday">Født:</label>
-                          <!--<input type="text" id="birthDate" name="birthDate" required>  -->
-                          <input type="date" id="birthDate" name="birthDate" required> 
-                          
-                          <label for="email">Eposten:</label>
-                          <input type="email" id="email" required>
-                        
-                       <!-- add telefon, ANNET , download or print, upload file søknadbrev -->  
-                        <!-- validation inputs for email, birth day... -->
-                        <!-- if possible two cv forms in norwegian and english -->
+                    <label for="birthdate">Født:</label>
+                    <!--<input type="text" id="birthDate" name="birthDate" required>  -->
+                    <input type="date" id="birthdate" name="birthDate" required>
 
-                      </div>     
-                      <div class="item2">
-                          <label for="address">Adresse:</label>
-                          <input type="text" id="address" name="address" required>
-
-
-
-                          <label for="summary">Sammendrag</label>
-                          <textarea id="summary" name="summary" ></textarea>
-                      </div>
-
-
-                      <div class="item3">
-                          <label for="skills">Ferdigheter</label>
-                          <input type="text" id="skills" name="skills" >
-
-                          <label for="experiences">Arbeidserfaring</label>
-                          <textarea id="experiences" name="experiences" ></textarea>
-                      </div>
-                      <div class="item4">
-                          <label for="qualification">Utdannelse</label>
-                          <textarea id="qualification" name="qualification" ></textarea>
-
-                          <label for="languages">Språk</label>
-                          <input type="text" id="languages" name="languages" >
-                      </div>
-
-
-                      <div class="item5">
-                          <label for="competence">Kompetanse</label>
-                          <textarea id="competence" name="competence" ></textarea>
-                          <label for="certification">Sertifikater</label>
-                          <textarea id="certification" name="certification" ></textarea>
-                          
-
-                      </div>
-                     <div class="item6">
-                          
-
-                          <label for="references">Referanser</label>
-                          <textarea id="references" name="references" ></textarea>
-
-                      </div>
-
-
-                  <button type="submit">Send</button>
-                  </form>
-
-
-
-
-                 </div>   
-                <div class="cv-template"> 
-                     <div class="full">
-            <div class="left">
-                <div class="image">
-            
-                    <img src=
-        "https://yosieftecleab.uk/images/profile-5.jpeg"
-                        alt="gfg-logo"
-                        style="width:100px;height:100px;">
+                    <label for="email">Eposten:</label>
+                    <input type="email" id="email" required>
                 </div>
-                <div class="Contact">
-                    <h2>Kontakt:</h2>
-                   
-            <p id="emailT"></p>
-                    <p></p>
+
+                <div class="item2">
+                    <label for="address">Adresse:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="phone">Telefon:</label>
+                    <input type="tel" id="phone" name="phone" required />
+
+                    <label for="linkedIn">LinkedIn:</label>
+                    <input type="text" id="linkedIn" name="linkedIn" />
                 </div>
-                <div class="Skills">
-                    <h2>Ferdigheter:</h2>
-                    <ul>
-                        <li><b></b></li>
-                        <li><b></b></li>
-                        <li><b></b></li>
-                    </ul>
+
+                <div class="item3">
+                    <label for="summary">Sammendrag:</label>
+                    <textarea id="summary" name="summary"></textarea>
+
+                    <label for="hobby">Interesser:</label>
+                    <textarea id="hobby" name="hobby"></textarea>
                 </div>
-                <div class="Language">
-                    <h2>Språk:</h2>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                    </ul>
+
+                <div class="item4">
+                    <div id="exp">
+                        <label for="experience">Arbeidserfaring:</label>
+                        <textarea class="experience" name="experience"></textarea>
+
+                        <!-- new textarea -->
+
+                        <button id="addExp" onclick="addWorkingExperiences()"> Legg til </button>
+                    </div>
                 </div>
-                <div class="Hobbies">
-                    <h2>Interesser:</h2>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                    </ul>
+
+                <div class="item5">
+                    <div id="qual">
+                        <label for="qualification">Utdannelse:</label>
+                        <textarea class="qualification" name="qualification"></textarea>
+                        <button id="addQual" onclick="addAnotherQualifications()"> Legg til </button>
+                    </div>
                 </div>
-            </div>
-            <div class="right">
-                <div class="name">
-                    <h1 id="nameT">cv</h1>
+
+                <div class="item6">
+                    <label for="certification">Sertifikater:</label>
+                    <textarea id="certification" name="certification"></textarea>
                 </div>
-                <div class="title">
-                    <p id="professianT"></p>
+
+                <div class="item7">
+                    <label for="skills">Kompetanse: </label>
+                    <input type="text" id="skills" name="skills">
+
+                    <label for="language">Språk:</label>
+                    <input type="text" id="language" name="language">
+
+                    <label for="other">Annet</label>
+                    <textarea id="other" name="other"></textarea>
                 </div>
-                <div class="Summary">
-                    <h2>Sammendrag:</h2>
-                    <p>
-                    </p>
+
+                <div class="item8">
+                    <button onclick="createCv()"> Lag CV </button>
                 </div>
-                <div class="Experience">
-                    <h2>Arbeidserfaring:</h2>
-                    <h3></h3>
-                    <p></p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <h3></h3>
-                    <p></p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+            </form>
+        </div>
+
+
+        <!-- cv-template -->
+
+        <div class="cv-template" id="templatecv">
+            <div class="full">
+                <div class="left">
+                    <div class="image">
+
+                        <img src="https://yosieftecleab.uk/images/profile-5.jpeg" alt="gfg-logo"
+                            style="width:100px;height:100px;">
+                    </div>
+                    <div class="Kontakt">
+                        <h2>Kontakt:</h2>
+                        <div id="emailT"></div>
+                        <div id="addressT"></div>
+                        <div id="phoneT"></div>
+                        <div id="linkedInT"></div>
+                    </div>
+                    <div class="Kompetanse">
+                        <h2>Kompetanse:</h2>
+                        <p id="skillsT"></p>
+                    </div>
+                    <div class="Språk">
+                        <h2>Språk:</h2>
+                        <p id="languageT"></p>
+                    </div>
+                    <div class="Interesser">
+                        <h2>Interesser:</h2>
+                        <p id="hobbyT"> </p>
+
+                    </div>
                 </div>
-                <div class="Education">
-                    <h2>Utdannelse:</h2>
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="project">
-                    <ul>
-                        <li>
-                            <h2></h2>
-                            <p></p>
-                        </li>
-                        <li>
-                            <h2></h2>
-                            <p></p>
-                        </li>
-                    </ul>
+                <div class="right">
+                    <div class="name">
+                        <h1 id="nameT">cv</h1>
+                        <p id="birthdateT"></p>
+                    </div>
+                    <div class="title">
+                        <p id="professianT"></p>
+                    </div>
+                    <div class="Sammendrag">
+                        <h2>Sammendrag:</h2>
+                        <p id="summaryT"> </p>
+                    </div>
+                    <div class="expT">
+                        <h2>Arbeidserfaring:</h2>
+                        <ul id="experienceT">
+
+                    </div>
+                    <div class="Utdannelse">
+                        <h2>Utdannelse:</h2>
+                        <ul id="qualificationT">
+
+                    </div>
+                    <div class="Annet">
+                        <h2>Annet:</h2>
+                        <p id="otherT"> </p>
+
+                    </div>
+                    <div class="Skrivut">
+                        <button onclick="printCv()">Skrivut</button>
+
+                    </div>
+
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+    <script src="script.js"></script>
 
-    
-       </div>
-      
-  </div>
- <script src="script.js"></script>
 </body>
+
 </html>

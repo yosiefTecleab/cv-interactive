@@ -1,60 +1,82 @@
-
-
-.grid-container{
-  display:grid;
-  grid-auto-flow:column;
- 
-  
-  font-size:15px;
-  color:black;
-  background-color:white;
-}
-
-.cv-form{
-  display:flex;
-  flex-direction: column;
-  background-color:white;
-  
-}
-
-.cv-template{
-      background-color:white;
-      font-family: Arial, Helvetica, sans-serif;
-      font-style: normal;
-      font-size: 15px;
- 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-}
-
-.full {
-      width: 90%;
-      max-width: 1000px;
-      min-height: 100px;
-      background-color: rgb(245, 239, 231);
-      margin: 0px;
-      display: grid;
-      grid-template-columns: 2fr 4fr;
+.main {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    color: black;
+    --background-color: gray;
   }
+  
+  .registrationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    --background-color: gray;
+    align-items: center;
+    flex-flow: column wrap;
+  
+  }
+  
+  .item1,
+  .item2,
+  .item3,
+  .item4,
+  .item5,
+  .item6,
+  .item7,
+  .item8 {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .cv-form {
+    background-color: gray;
+    /*  display: none; */
+  }
+  
+  .cv-template {
+    width: 80%;
+    /*  display: none; */
+  }
+  
+  .full {
+  
+    width: 85%;
+    max-width: 1000px;
+    min-height: 100px;
+    background-color: rgb(245, 239, 231);
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+  }
+  
   .left {
-      position: initial;
-      background-color: rgb(126, 219, 231);
-      padding: 20px;
+    position: initial;
+    background-color: rgb(181, 211, 224);
+    padding: 20px;
   
   }
+  
   .right {
-      position: initial;
-      background-color: rgb(162, 202, 206);
-      padding: 20px;
+    position: initial;
+    background-color: rgb(194, 227, 255);
+    padding: 20px;
   
   }
-  .image, .Contact, .Skills, .Language, .Hobbies, .title, 
-  .Summary, .Experience, .Education, .project {
-      margin-bottom: 30px;
+  
+  .image,
+  .Kontakt,
+  .Kompetanse,
+  .Språk,
+  .Interesser,
+  .title,
+  .Sammendrag,
+  .Arbeidserfaring,
+  .Utdannelse,
+  .Annet {
+    margin-bottom: 30px;
   }
+  
   .h2 {
-      background-color: rgb(4, 96, 150);
+    background-color: rgb(4, 96, 150);
   }
-  
-
