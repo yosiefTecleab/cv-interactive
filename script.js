@@ -4,6 +4,7 @@ $(document).ready(function () {
   $(".registrationForm").on("submit", function (event) {
     event.preventDefault();
 
+
     let email = $("#email").val();
 
     let name = $("#fullName").val();
@@ -32,6 +33,7 @@ $(document).ready(function () {
     $("#qualificationT").text(qualification);
     $("#otherT").text(other);
     //$("#nameT").append(name);
+
 
   });
 
