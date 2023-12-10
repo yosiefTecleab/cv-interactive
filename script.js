@@ -17,6 +17,7 @@ $(document).ready(function () {
     let summary = $("#summary").val();
     let hobby = $("#hobby").val();
     let qualification = $("#qualification").val();
+    let certification=$("#certification").val();
     let other = $("#other").val();
 
 
@@ -31,6 +32,7 @@ $(document).ready(function () {
     $("#summaryT").text(summary);
     $("#hobbyT").text(hobby);
     $("#qualificationT").text(qualification);
+    $("#certificationT").text(certification);
     $("#otherT").text(other);
     //$("#nameT").append(name);
 

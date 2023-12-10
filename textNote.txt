@@ -11,3 +11,8 @@ serifisert funker ikke
       -bilde kan få fra fil
      -fra født få alder
       -ikke vise sammedrag, utdannelse,....når det starter
+      -space bn cv form and cv template
+      -background cv form gray should be othert 
+      -Språk add plus icon
+      -bruk bootstrap for cv skjema
+      
