@@ -1,0 +1,13 @@
+-bug cv-interactive- v-2.4
+
+-In both work experience and qualification , additional information (Leggtil)
+ should be done at last before you submit the cv form. Other ways, the fields after Arbeidserfaring and
+  Utdannelse ,namely Sertifikater,Ferdigheter,Språk and Annet , the information will not display.
+
+-as of des. 10, 2023 kl 19:44
+serifisert funker ikke
+  
+-anbefalt 
+      -bilde kan få fra fil
+     -fra født få alder
+      -ikke vise sammedrag, utdannelse,....når det starter
