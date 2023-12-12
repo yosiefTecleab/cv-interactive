@@ -71,8 +71,20 @@ function addAnotherQualifications() {
   qualAdd.insertBefore(nodeQual, addBtn);
 }
 
-function createCv() {
+function addLanguage(){
+  let nodelang=document.createElement("textarea");
+  nodelang.classList.add("language");
+  //nodelang.setAttribute("rows",2);
 
+  let langAdd=document.getElementById("lang");
+  let addBtnLang=document.getElementById("addLang");
+
+  langAdd.insertBefore(nodelang,addBtnLang);
+
+}
+
+function createCv() {
+  // list more experiences if available
   let wes = document.getElementsByClassName("experience");
 
   let str = "";
@@ -83,6 +95,7 @@ function createCv() {
 
   document.getElementById("experienceT").innerHTML = str;
 
+   // list more qualifications
   let wes2 = document.getElementsByClassName("qualification");
 
   let str2 = "";
@@ -92,7 +105,17 @@ function createCv() {
   }
 
   document.getElementById("qualificationT").innerHTML = str2;
+  
+  // list more languages
+  let langMore = document.getElementsByClassName("language");
 
+  let lang = "";
+
+  for (let la of langMore) {
+    lang = lang + `<li> ${la.value} </li>`;
+  }
+
+  document.getElementById("languageT").innerHTML = lang;
 
 
 }
@@ -103,4 +126,3 @@ function printCv() {
   //$(".registrationForm")[0].reset()
   window.print();
 }
-
