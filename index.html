@@ -71,17 +71,25 @@
                 </div>
 
                 <div class="item7">
+                    <div id="lang"> 
+                        <label for="language">Språk:</label>
+                        <textarea class="language" name="language"></textarea>
+                        <button id="addlang"  onclick="addLanguage()">Legg til</button>
+                    </div>
+
+                </div>
+
+                <div class="item8">
                     <label for="skills">Kompetanse: </label>
                     <input type="text" id="skills" name="skills">
-
-                    <label for="language">Språk:</label>
-                    <input type="text" id="language" name="language">
+                     
+                    
 
                     <label for="other">Annet</label>
                     <textarea id="other" name="other"></textarea>
                 </div>
 
-                <div class="item8">
+                <div class="item9">
                     <button onclick="createCv()"> Lag CV </button>
                 </div>
             </form>
@@ -90,28 +98,22 @@
 
         <!-- cv-template -->
 
-        <div class="cv-template" id="templatecv">
+        <div class="cv-template" id="templatecv" class="remove-whitespace">
             <div class="full">
                 <div class="left">
                     <div class="image">
 
                         <img src="https://yosieftecleab.uk/images/profile-5.jpeg" alt="gfg-logo"
-                            style="width:100px;height:100px;">
+                            style="width:110px;height:110px;margin-left:25px;margin-right:20px;">
                     </div>
-                    <div class="Kontakt">
-                        <h2>Kontakt:</h2>
-                        <div id="emailT"></div>
-                        <div id="addressT"></div>
-                        <div id="phoneT"></div>
-                        <div id="linkedInT"></div>
-                    </div>
+                    
                     <div class="Kompetanse">
                         <h2>Kompetanse:</h2>
                         <p id="skillsT"></p>
                     </div>
                     <div class="Språk">
                         <h2>Språk:</h2>
-                        <p id="languageT"></p>
+                        <ul id="languageT" class="nobullet"></ul>
                     </div>
                     <div class="Interesser">
                         <h2>Interesser:</h2>
@@ -120,25 +122,30 @@
                     </div>
                 </div>
                 <div class="right">
-                    <div class="name">
-                        <h1 id="nameT">cv</h1>
+                    <div class="name" class="Kontakt">
+                        <h2 id="nameT">cv</h2>
                         <p id="birthdateT"></p>
+                        <p id="emailT"></p>
+                        <p id="addressT"></p>
+                        <p id="phoneT"></p>
+                        <p id="linkedInT"></p>
                     </div>
-                    <div class="title">
-                        <p id="professianT"></p>
-                    </div>
+                  
+                 
+                  
+                  
                     <div class="Sammendrag">
                         <h2>Sammendrag:</h2>
-                        <p id="summaryT"> </p>
+                        <p  id="summaryT" > </p>
                     </div>
-                    <div class="expT">
+                    <div class="Arbeidserfaring" class="expT">
                         <h2>Arbeidserfaring:</h2>
-                        <ul id="experienceT">
+                        <ul  id="experienceT" class="nobullet">
 
                     </div>
                     <div class="Utdannelse">
                         <h2>Utdannelse:</h2>
-                        <ul id="qualificationT">
+                        <ul id="qualificationT" class="nobullet">
 
                     </div>
                     <div class="Sertifikater">
