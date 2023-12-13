@@ -9,8 +9,11 @@
       let skills = $("#skills").val();
       let language = $("#language").val();
       let birthdate = $("#birthdate").val();
-    
-    
+         
+	  let bdate=new Date(birthdate);
+      let norway_format= new Intl.DateTimeFormat('nb-NO').format(bdate);
+      // $("#birthdateT").text(norway_format);
+	    
       let summary = $("#summary").val();
       let hobby = $("#hobby").val();
       let qualification = $("#qualification").val();
@@ -25,7 +28,8 @@
       $("#linkedInT").text(linkedIn);
       $("#skillsT").text(skills);
       $("#languageT").text(language);
-      $("#birthdateT").text(`Født: ${birthdate}`);
+	  
+      $("#birthdateT").text(`Født: ${norway_format}`);
       
       $("#summaryT").text(summary);
       $("#hobbyT").text(hobby);
