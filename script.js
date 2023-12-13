@@ -2,8 +2,8 @@
   function getPersonalDetail(){
     let email = $("#email").val();
   
-      let name = $("#Fornavn").val();
-      let name2 = $("#Etternavn").val();
+      let firstname = $("#Fornavn").val();
+      let lastname = $("#Etternavn").val();
       let address = $("#address").val();
       let phone = $("#phone").val();
       let linkedIn = $("#linkedIn").val();
@@ -23,7 +23,7 @@
   
   
       $("#emailT").text(email);
-      $("#nameT").text(`${name} ${name2}`);
+      $("#nameT").text(`${firstname} ${lastname}`);
       $("#addressT").text(`Address: ${address}`);
       $("#phoneT").text(phone);
       $("#linkedInT").text(linkedIn);
