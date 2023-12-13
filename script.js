@@ -2,7 +2,8 @@
   function getPersonalDetail(){
     let email = $("#email").val();
   
-      let name = $("#fullName").val();
+      let name = $("#Fornavn").val();
+      let name2 = $("#Etternavn").val();
       let address = $("#address").val();
       let phone = $("#phone").val();
       let linkedIn = $("#linkedIn").val();
@@ -10,7 +11,7 @@
       let language = $("#language").val();
       let birthdate = $("#birthdate").val();
          
-	  let bdate=new Date(birthdate);
+	    let bdate=new Date(birthdate);
       let norway_format= new Intl.DateTimeFormat('nb-NO').format(bdate);
       // $("#birthdateT").text(norway_format);
 	    
@@ -22,8 +23,8 @@
   
   
       $("#emailT").text(email);
-      $("#nameT").text(name);
-      $("#addressT").text(`Address:${address}`);
+      $("#nameT").text(`${name} ${name2}`);
+      $("#addressT").text(`Address: ${address}`);
       $("#phoneT").text(phone);
       $("#linkedInT").text(linkedIn);
       $("#skillsT").text(skills);
