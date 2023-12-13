@@ -1,7 +1,7 @@
 
   function getPersonalDetail(){
-    let email = $("#email").val();
-  
+     
+      let email = $("#email").val();
       let firstname = $("#Fornavn").val();
       let lastname = $("#Etternavn").val();
       let address = $("#address").val();
@@ -20,8 +20,25 @@
       let qualification = $("#qualification").val();
       let certification=$("#certification").val();
       let other = $("#other").val();
-  
-  
+      
+      if (validateEmail(email) === false) {
+        alert("You have entered an invalid email address!");
+        return (false);
+      }
+      if (validatePhone(phone) === false) {
+        alert("You have entered an invalid phone number!");
+        return (false);
+      }
+      if (validateName(firstname) === false){
+        alert("You have entered an invalid first name!");
+        return (false);
+      }
+      if (validateName(lastname)=== false){
+        alert("You have entered an invalid last name!");
+        return (false);
+      }       
+
+
       $("#emailT").text(email);
       $("#nameT").text(`${firstname} ${lastname}`);
       $("#addressT").text(`Address: ${address}`);
@@ -38,7 +55,9 @@
       $("#certificationT").text(certification);
       $("#otherT").text(other);
       //$("#nameT").append(name);
-  
+
+
+     
   }
 
 
@@ -119,7 +138,6 @@
 
     document.getElementById("languageT").innerHTML = lang;
   
-  
   }
   
   function printCv() {
@@ -127,5 +145,56 @@
     document.getElementById("templatecv").style.display = "block";
     //$(".registrationForm")[0].reset()
     window.print();
+  }
+  
+
+  function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  function validatePhone(phone) { 
+    var re = /^[0-9]{8}$/;
+    return re.test(String(phone).toLowerCase());
+  }
+  
+  
+  function validateName(name) {
+    // Regular expression pattern to match names with two words separated by a space
+    var pattern = /^[a-zA-Z]+( [a-zA-Z]+)?$/;
+    
+    // Check if the name matches the pattern
+    return pattern.test(name);
+  }
+
+  function selectBirthdate(birthdate){
+    //let bdate=new Date(birthdate);
+    //let norway_format= new Intl.DateTimeFormat('nb-NO').format(bdate);
+    //$("#birthdateT").text(norway_format);
+
+  }
+
+  function checkAge() {
+    var birthdate = document.getElementById('birthdate').value;
+    
+    // Create a Date object from the input value
+    var dob = new Date(birthdate);
+    
+    // Get today's date
+    var today = new Date();
+    
+    // Calculate the age
+    var age = today.getFullYear() - dob.getFullYear();
+    var monthDiff = today.getMonth() - dob.getMonth();
+    
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+      age--;
+    }
+    
+    // Check if age is greater than or equal to 18
+    if (age <= 16) {
+      alert("You are under 16. Age: " + age);
+      // This is where you can proceed with the accepted action
+    } 
   }
   
