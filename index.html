@@ -15,51 +15,55 @@
               <div class="row">
                   <div class="col-md-4">
                       <div class="form-group">
-                          <label for="Fornavn">Fornavn:</label>
-                          <input type="text" class="form-control" id="Fornavn" name="Fornavn" required>
+                          <label for="Fornavn"></label>
+                          <input type="text" class="form-control" id="Fornavn" name="Fornavn" placeholder="Fornavn" required>
                       </div>
 
                       <div class="form-group">
-                          <label for="birthdate">Født:</label>
-                          <input type="date" class="form-control" id="birthdate" name="birthDate" required>
+                          <label for="birthdate"></label>
+                          <input type="date" class="form-control" id="birthdate" name="birthDate" placeholder="Født" required>
                       </div>
 
                       <div class="form-group">
-                        <label for="linkedIn">LinkedIn:</label>
-                        <input type="text" class="form-control" id="linkedIn" name="linkedIn">
+                        <label for="linkedIn"></label>
+                        <input type="text" class="form-control" id="linkedIn" name="linkedIn" placeholder="LinkedIn">
                     </div>
                   </div>
 
                   <div class="col-md-4">
                       <div class="form-group">
-                          <label for="Etternavn">Etternavn:</label>
-                          <input type="text" class="form-control" id="Etternavn" name="Etternavn" required>
+                          <label for="Etternavn"></label>
+                          <input type="text" class="form-control" id="Etternavn" name="Etternavn"  placeholder="Etternavn" required>
                       </div>
                    
                       <div class="form-group">
-                        <label for="email">Eposten:</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <label for="email"></label>
+                        <input type="email" class="form-control" id="email" placeholder="Eposten" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid email address.
+                        </div>
                     </div>
+
                       <div class="form-group">
-                        <label for="hobby">Interesser:</label>
-                        <textarea class="form-control" id="hobby" name="hobby"></textarea>
+                        <label for="hobby"></label>
+                        <textarea class="form-control" id="hobby" name="hobby" placeholder="Interesser"></textarea>
                     </div>
                   </div>
 
                   <div class="col-md-4">
                     
                     <div class="form-group">
-                        <label for="phone">Telefon:</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                        <label for="phone"></label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="address">Adresse:</label>
-                        <input type="text" class="form-control" id="address" name="address" required>
+                        <label for="address"></label>
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Adresse" required>
                     </div>
                       <div class="form-group">
-                        <label for="summary">Sammendrag:</label>
-                        <textarea class="form-control" id="summary" name="summary"></textarea>
+                        <label for="summary"></label>
+                        <textarea class="form-control" id="summary" name="summary" placeholder="Sammendrag"></textarea>
                     </div>
 
                   </div>
@@ -67,16 +71,16 @@
               <div class="row">
                   <div class="col-md-6">
                       <div class="form-group" id="exp">
-                          <label for="experience">Arbeidserfaring:</label>
-                          <textarea class="form-control experience" name="experience"></textarea>
+                          <label for="experience"></label>
+                          <textarea class="form-control experience" name="experience" placeholder="Arbeidserfaring"></textarea>
                           <button id="addExp" type="button" class="btn btn-secondary" onclick="addWorkingExperiences()">Legg til</button>
                       </div>
                   </div>
 
                   <div class="col-md-6">
                       <div class="form-group" id="qual">
-                          <label for="qualification">Utdannelse:</label>
-                          <textarea class="form-control qualification" name="qualification"></textarea>
+                          <label for="qualification"></label>
+                          <textarea class="form-control qualification" name="qualification" placeholder="Utdannelse"></textarea>
                           <button id="addQual" type="button" class="btn btn-secondary" onclick="addAnotherQualifications()">Legg til</button>
                       </div>
                   </div>
@@ -85,15 +89,15 @@
               <div class="row">
                   <div class="col-md-6">
                       <div class="form-group">
-                          <label for="certification">Sertifikater:</label>
-                          <textarea class="form-control" id="certification" name="certification"></textarea>
+                          <label for="certification"></label>
+                          <textarea class="form-control" id="certification" name="certification" placeholder="Sertifikater"></textarea>
                       </div>
                   </div>
 
                   <div class="col-md-6">
                       <div class="form-group" id="lang">
-                          <label for="language">Språk:</label>
-                          <textarea class="form-control language" name="language"></textarea>
+                          <label for="language"></label>
+                          <textarea class="form-control language" name="language" placeholder="Språk"></textarea>
                           <button type="button" class="btn btn-secondary" onclick="addLanguage()">Legg til</button>
                       </div>
                   </div>
@@ -102,15 +106,15 @@
               <div class="row">
                   <div class="col-md-6">
                       <div class="form-group">
-                          <label for="skills">Kompetanse:</label>
-                          <input type="text" class="form-control" id="skills" name="skills">
+                          <label for="skills"></label>
+                          <input type="text" class="form-control" id="skills" name="skills" placeholder="Kompetanse">
                       </div>
                   </div>
 
                   <div class="col-md-6">
                       <div class="form-group">
-                          <label for="other">Annet:</label>
-                          <textarea class="form-control" id="other" name="other"></textarea>
+                          <label for="other"></label>
+                          <textarea class="form-control" id="other" name="other" placeholder="Annet"></textarea>
                       </div>
                   </div>
               </div>
