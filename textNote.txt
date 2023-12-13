@@ -1,18 +1,18 @@
--bug cv-interactive- v-2.4
-
--In both work experience and qualification , additional information (Leggtil)
- should be done at last before you submit the cv form. Other ways, the fields after Arbeidserfaring and
-  Utdannelse ,namely Sertifikater,Ferdigheter,Språk and Annet , the information will not display.
-
--as of des. 10, 2023 kl 19:44
-serifisert funker ikke
+-as of des. 13, 2023 kl 14:00
+ -bootstrap for cv skjema ferdig
   
 -anbefalt 
       -bilde kan få fra fil
-     -fra født få alder
+     -fra født få alder eller format dd-mm-år
       -ikke vise sammedrag, utdannelse,....når det starter
-      -space bn cv form and cv template
-      -background cv form gray should be othert 
+      -mellomrom cv form og cv template
+      -background fargen , gray bytte
       -Språk add plus icon
-      -bruk bootstrap for cv skjema
       
+      
+
+
+
+---11-12-2013 kl 22:33
+sjekk født dato input det må være > 18
+---skriv som dd.mm.yyyy
