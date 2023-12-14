@@ -22,22 +22,24 @@
       let other = $("#other").val();
       
       if (validateEmail(email) === false) {
-        alert("You have entered an invalid email address!");
+        alert("Den er ugyldig eposten!");
         return (false);
       }
       if (validatePhone(phone) === false) {
-        alert("You have entered an invalid phone number!");
+        alert("Den er ugyldig norsk telefonnumber! må være 8 siffer");
         return (false);
       }
       if (validateName(firstname) === false){
-        alert("You have entered an invalid first name!");
+        alert("Det er ugyldig fornavn!");
         return (false);
       }
       if (validateName(lastname)=== false){
-        alert("You have entered an invalid last name!");
+        alert("Det er ugyldig etternavn!");
         return (false);
       }       
-
+      // check for under age
+	  checkAge();
+	 
 
       $("#emailT").text(email);
       $("#nameT").text(`${firstname} ${lastname}`);
@@ -175,10 +177,10 @@
   }
 
   function checkAge() {
-    var birthdate = document.getElementById('birthdate').value;
+    var bdate = document.getElementById('birthdate').value;
     
     // Create a Date object from the input value
-    var dob = new Date(birthdate);
+    var dob = new Date(bdate);
     
     // Get today's date
     var today = new Date();
@@ -190,10 +192,12 @@
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
       age--;
     }
+	
+
     
     // Check if age is greater than or equal to 18
     if (age <= 16) {
-      alert("You are under 16. Age: " + age);
+      alert(`Du er ${age} år (mindreårig)`);
       // This is where you can proceed with the accepted action
     } 
   }
