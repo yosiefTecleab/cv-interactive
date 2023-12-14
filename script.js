@@ -30,8 +30,8 @@
 	  //validate for norwegian mobile phone number
 	
 	  let isValid = validateNorwegianPhoneNumber(phone);
-		if (isValid  === false) {
-		  alert("Den er ugyldig norsk telefonnumber! må være 8 siffer");
+		if (isValid  === false) {		  
+		  alert("Den er ugyldig norsk telefonnumber! må være 8 siffer i det minste. Ex 12345678, +4712345678, 004712345678, 4712345678");
 		  return (false);
 		} 
 	  
