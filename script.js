@@ -20,21 +20,9 @@
       let qualification = $("#qualification").val();
       let certification=$("#certification").val();
       let other = $("#other").val();
-      
-      if (validateEmail(email) === false) {
-        alert("Den er ugyldig eposten!");
-        return (false);
-      }
-      
-	  
-	  //validate for norwegian mobile phone number
-	
-	  let isValid = validateNorwegianPhoneNumber(phone);
-		if (isValid  === false) {
-		  alert("Den er ugyldig norsk telefonnumber! må være 8 siffer i det minste. Ex 12345678, +4712345678, 004712345678, 4712345678");
-		  return (false);
-		} 
-	  
+
+
+
       if (validateName(firstname) === false){
         alert("Det er ugyldig fornavn!");
         return (false);
@@ -42,7 +30,24 @@
       if (validateName(lastname)=== false){
         alert("Det er ugyldig etternavn!");
         return (false);
-      }       
+      }
+      //validate for norwegian mobile phone number
+	
+	  let isValid = validateNorwegianPhoneNumber(phone);
+		if (isValid  === false) {
+		  alert("Den er ugyldig norsk telefonnumber! må være 8 siffer i det minste. Ex 12345678, +4712345678, 004712345678, 4712345678");
+		  return (false);
+		}        
+      
+      if (validateEmail(email) === false) {
+        alert("Den er ugyldig eposten!");
+        return (false);
+      }
+      
+	  
+	  
+	  
+      
       // check for under age
 	  checkAge();
 	 
