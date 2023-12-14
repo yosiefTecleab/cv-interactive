@@ -103,5 +103,9 @@
    .Språk,
    .Interesser {
      margin: 10px;
+     & p,ul {
+      text-align: right;
+     }
+     
      
    }
