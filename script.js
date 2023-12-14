@@ -30,7 +30,7 @@
 	  //validate for norwegian mobile phone number
 	
 	  let isValid = validateNorwegianPhoneNumber(phone);
-		if (isValid  === false) {		  
+		if (isValid  === false) {
 		  alert("Den er ugyldig norsk telefonnumber! må være 8 siffer i det minste. Ex 12345678, +4712345678, 004712345678, 4712345678");
 		  return (false);
 		} 
@@ -216,4 +216,14 @@
       // This is where you can proceed with the accepted action
     } 
   }
+  
+  let file = document.querySelector("#photo");
+  
+  file.addEventListener("change", function() {
+    const reader = new FileReader()
+    reader.addEventListener("load", () => {
+      document.querySelector("#photoT").src = reader.result
+    })
+    reader.readAsDataURL(this.files[0]);
+  })
   
