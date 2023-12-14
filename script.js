@@ -25,10 +25,16 @@
         alert("Den er ugyldig eposten!");
         return (false);
       }
-      if (validatePhone(phone) === false) {
-        alert("Den er ugyldig norsk telefonnumber! må være 8 siffer");
-        return (false);
-      }
+      
+	  
+	  //validate for norwegian mobile phone number
+	
+	  let isValid = validateNorwegianPhoneNumber(phone);
+		if (isValid  === false) {
+		  alert("Den er ugyldig norsk telefonnumber! må være 8 siffer");
+		  return (false);
+		} 
+	  
       if (validateName(firstname) === false){
         alert("Det er ugyldig fornavn!");
         return (false);
@@ -44,7 +50,7 @@
       $("#emailT").text(email);
       $("#nameT").text(`${firstname} ${lastname}`);
       $("#addressT").text(`Address: ${address}`);
-      $("#phoneT").text(phone);
+      $("#phoneT").text(phone.replaceAll(' ', ''));   // white space removed from phone number
       $("#linkedInT").text(linkedIn);
       $("#skillsT").text(skills);
       $("#languageT").text(language);
@@ -160,6 +166,20 @@
     return re.test(String(phone).toLowerCase());
   }
   
+  function validateNorwegianPhoneNumber(number) {
+  // Regular expression for Norwegian phone numbers
+  const norwegianPhoneRegex = /^(0047|\+47|47)?\s?(\d{2})\s?(\d{2})\s?(\d{2})\s?(\d{2})$/;
+
+  // Remove any whitespace in the number
+  const cleanedNumber = number.replace(/\s/g, '');
+
+  // Test the number against the regex
+  return norwegianPhoneRegex.test(cleanedNumber);
+}
+
+
+
+
   
   function validateName(name) {
     // Regular expression pattern to match names with two words separated by a space
@@ -169,12 +189,7 @@
     return pattern.test(name);
   }
 
-  function selectBirthdate(birthdate){
-    //let bdate=new Date(birthdate);
-    //let norway_format= new Intl.DateTimeFormat('nb-NO').format(bdate);
-    //$("#birthdateT").text(norway_format);
-
-  }
+ 
 
   function checkAge() {
     var bdate = document.getElementById('birthdate').value;
