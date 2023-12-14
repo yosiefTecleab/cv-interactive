@@ -60,14 +60,14 @@
   
   .left {
     position: initial;
-    background-color: rgb(181, 211, 224);
-    padding: 20px;
+   --background-color: rgb(181, 211, 224);
+   --padding: 20px;
   
   }
   
   .right {
     position: initial;
-    background-color: rgb(194, 227, 255);
+    --background-color: rgb(194, 227, 255);
     padding: 20px;
   
   }
@@ -99,4 +99,9 @@
     padding: 0;
    }
 
-
+   .Kompetanse,
+   .Språk,
+   .Interesser {
+     margin: 10px;
+     
+   }
