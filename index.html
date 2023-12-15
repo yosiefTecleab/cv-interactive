@@ -14,14 +14,14 @@
               <h5>CV Mal</h5>
               <div class="row">
                   <div class="col-md-4">
-                      <div class="form-group">
-                          <label for="Fornavn"></label>
-                          <input type="text" class="form-control" id="Fornavn" name="Fornavn" placeholder="Fornavn" required>
+                      <div class="form-group required">
+                          <label for="Fornavn" class="control-label"></label>
+                          <input type="text" class="form-control" id="Fornavn" name="Fornavn" placeholder="Fornavn" required="required">
                       </div>
 
-                      <div class="form-group">
-                          <label for="birthdate"></label>
-                          <input type="date" class="form-control" id="birthdate" name="birthDate" value="2000-05-26" placeholder="Født"  required>
+                      <div class="form-group required">
+                          <label for="birthdate" class="control-label"></label>
+                          <input type="date" class="form-control" id="birthdate" name="birthDate" value="2000-05-26" placeholder="Født"  required="required">
                       </div>
 
                       <div class="form-group">
@@ -31,14 +31,14 @@
                   </div>
 
                   <div class="col-md-4">
-                      <div class="form-group">
-                          <label for="Etternavn"></label>
-                          <input type="text" class="form-control" id="Etternavn" name="Etternavn"  placeholder="Etternavn" required>
+                      <div class="form-group required">
+                          <label for="Etternavn" class="control-label"></label>
+                          <input type="text" class="form-control" id="Etternavn" name="Etternavn"  placeholder="Etternavn" required="required">
                       </div>
                    
-                      <div class="form-group">
-                        <label for="email"></label>
-                        <input type="email" class="form-control" id="email" placeholder="Eposten" required>
+                      <div class="form-group required">
+                        <label for="email" class="control-label"></label>
+                        <input type="email" class="form-control" id="email" placeholder="Eposten" required="required">
                         <div class="invalid-feedback">
                             Please provide a valid email address.
                         </div>
@@ -52,9 +52,9 @@
 
                   <div class="col-md-4">
                     
-                    <div class="form-group">
-                        <label for="phone"></label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon" required>
+                    <div class="form-group required">
+                        <label for="phone" class="control-label"></label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon" required="required">
                     </div>
 
                     <div class="form-group">
@@ -118,20 +118,23 @@
                         <input type="file" id="photo" name="photo" accept="image/x-png,image/gif,image/jpeg" placeholder="photo">
                     </div>
                 </div>
-
+                 
 
                   <div class="col-md-6">
                       <div class="form-group">
                           <label for="other"></label>
                           <textarea class="form-control" id="other" name="other" placeholder="Annet"></textarea>
                       </div>
+					  <p class="required-description" style="font-size:14px;margin-top: 15px;">  <span id="required-sign">*</span>  obligatorisk felt </p>
                   </div>
               </div>
 
               <div class="text-center">
                   <button type="button" class="btn btn-primary" onclick="createCv()">Lag CV</button>
               </div>
+			  
           </form>
+		  
       </div>
 
          <!-- cv-template -->
