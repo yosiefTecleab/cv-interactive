@@ -1,6 +1,4 @@
 
-
-
 .main {
     display: flex;
     flex-direction: row;
@@ -60,14 +58,10 @@
   
   .left {
     position: initial;
-   --background-color: rgb(181, 211, 224);
-   --padding: 20px;
-  
   }
   
   .right {
     position: initial;
-    --background-color: rgb(194, 227, 255);
     padding: 20px;
   
   }
@@ -105,13 +99,17 @@
      margin: 10px;
      & p,ul {
       text-align: right;
-     }
-     
-     
+     }   
    }
    
-   
-   #nameT {
-     font-weight: bold;
-     margin-bottom: 10px;
-   }
+.form-group.required .control-label:after { 
+    color: #d00;
+    content: "*";
+    position: absolute;
+}
+
+#required-sign {
+  color: red;
+  text-align: left;
+ 
+}
