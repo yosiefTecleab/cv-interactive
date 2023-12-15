@@ -1,10 +1,12 @@
+
+
 -as of des. 13, 2023 kl 14:00
  -bootstrap for cv skjema ferdig
   
 -anbefalt 
       -bilde kan få fra fil
      -fra født få alder eller format dd-mm-år
-      -ikke vise sammedrag, utdannelse,....når det starter
+     
       -mellomrom cv form og cv template
       -background fargen , gray bytte
       -Språk add plus icon
@@ -14,5 +16,5 @@
 
 
 ---11-12-2013 kl 22:33
-sjekk født dato input det må være > 18
+sjekk født dato input det må være > 16
 ---skriv som dd.mm.yyyy
