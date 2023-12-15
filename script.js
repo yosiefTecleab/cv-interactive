@@ -42,16 +42,11 @@
       if (validateEmail(email) === false) {
         alert("Den er ugyldig eposten!");
         return (false);
-      }
-      
+      } 
 	  
-	  
-	  
-      
       // check for under age
 	  checkAge();
 	 
-
       $("#emailT").text(email);
       $("#nameT").text(`${firstname} ${lastname}`);
       $("#addressT").text(`Address: ${address}`);
@@ -67,12 +62,8 @@
       $("#qualificationT").text(qualification);
       $("#certificationT").text(certification);
       $("#otherT").text(other);
-      //$("#nameT").append(name);
-
-
      
   }
-
 
   function addWorkingExperiences() {
     let newNode = document.createElement("textarea");
@@ -182,9 +173,6 @@
   return norwegianPhoneRegex.test(cleanedNumber);
 }
 
-
-
-
   
   function validateName(name) {
     // Regular expression pattern to match names with two words separated by a space
@@ -193,8 +181,6 @@
     // Check if the name matches the pattern
     return pattern.test(name);
   }
-
- 
 
   function checkAge() {
     var bdate = document.getElementById('birthdate').value;
@@ -213,12 +199,9 @@
       age--;
     }
 	
-
-    
-    // Check if age is greater than or equal to 18
     if (age <= 16) {
       alert(`Du er ${age} år (mindreårig)`);
-      // This is where you can proceed with the accepted action
+      
     } 
   }
   
